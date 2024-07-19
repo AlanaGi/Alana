@@ -1,0 +1,15 @@
+Current runner version: '2.317.0'
+Operating System
+Runner Image
+Runner Image Provisioner
+GITHUB_TOKEN Permissions
+Secret source: Actions
+Prepare workflow directory
+Prepare all required actions
+Getting action download info
+Download action repository 'actions/checkout@v4' (SHA:692973e3d937129bcbf40652eb9f2f61becf3332)
+Download action repository 'actions/jekyll-build-pages@v1' (SHA:b178f9334b208360999a0a57b523613563698c66)
+Download action repository 'actions/upload-pages-artifact@v3' (SHA:56afc609e74202658d3ffba0e8f6dda462b719fa)
+Getting action download info
+Download action repository 'actions/upload-artifact@v4' (SHA:0b2256b8c012f0828dc542b3febcab082c67f72b)
+Complete job name: build
