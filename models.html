@@ -4,12 +4,12 @@
     <head>
         <title>Alana Gibbs</title>
         <link rel="stylesheet" type="text/css" href="assets\css\style.css">
-        <script type="text/javascript" src="assets\js\jquery-3.7.0.min.js"></script>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script type="text/javascript" src="assets\js\jquery-3.7.0.min.js"></script>
     </head>
     <body class="Site">
         <header id="logo">
-            <img src="assets\images\Signature_cropped_3.png" style="width:20%; height:20%;" alt="Alana logo" class="logo">
+            <img src="assets\images\Signature_cropped_3.png" style="width:20%; height:20%;" alt="Alana Logo" class="logo">
             <script>
                 $(document).ready(function() {
                     $('img.logo').click(function() {
@@ -33,51 +33,70 @@
             <li><a href="about.html" class="transition">about</a></li>
           </ul>  
         </div>
-       <div class="w3-row">            
-             <div class="w3-col s3"> <img onclick="onClick(this)" src="assets/images/sketches/Aliyah.jpg" style="width:100%; height:100%;" alt="Aliyah"></div>
-           
-             <div class="w3-col s3"><img onclick="onClick(this)" src="assets/images/sketches/Unlikely_friends.jpg" style="width:100%; height:100%;" alt="Unlikely Friends"></div>
-            
-             <div class="w3-col s3"><img onclick="onClick(this)" src="assets/images/sketches/Unlikely_friends_till_the_end.jpg" style="width:100%; height:100%;" alt="Unlikely friends till the end.jpg"></div>
-           
-             <div class="w3-col s3"><img onclick="onClick(this)" src="assets/images/sketches/Chocolatecat.jpg" style="width:100%; height:100%" alt = "Chocolate Cat"></div>
+      
 
-        
-        </div>
+        <div class="w3-content" style="max-width:1200px">
+            <img class="myBar" onclick="onClick(this)" src="assets/images/assets/barrel_model.mp4" style="width:50%;display:none">
+            <img class="myBar" onclick="onClick(this)" src="assets/images/character_design/Ice_Cream_Girl_redesign.jpg" style="width:50%">
+            <img class="myBar" onclick="onClick(this)" src="assets/images/character_design/licorice.jpg" style="width:50%;display:none">
+            <img class="myBar" onclick="onClick(this)" src="assets/images/character_design/The_Serpent.jpg" style="width:50%;display:none">
+          
+            <div class="w3-row-padding w3-section">
+              <div class="w3-col s4">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="assets/images/assets/barrel.png" alt="Barrel" style="width:30%;cursor:pointer" onclick="currentDiv(1)">
+                    </div>
+                  <div class="w3-col s4">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="assets/images/character_design/Ice_Cream_Girl_redesign.jpg" alt="Ice Cream Girl Redesign" style="width:30%;cursor:pointer" onclick="currentDiv(2)">
+                    </div>
+                  <div class="w3-col s4">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="assets/images/character_design/licorice.jpg" alt="Licorice" style="width:30%;cursor:pointer" onclick="currentDiv(3)">
+                    </div>
+                  <div class="w3-col s4">
+                <img class="demo w3-opacity w3-hover-opacity-off" src="assets/images/character_design/The_Serpent.jpg" alt="Licorice" style="width:30%;cursor:pointer" onclick="currentDiv(4)">
+              </div>
+            </div>
+          </div>
 
-        <div class="w3-row">
-            <div class="w3-col s3"> <img onclick="onClick(this)" src="assets/images/sketches/licorice.jpg" style="width:100%; height:100%;" alt="Licorice"></div>
-            
-            <div class="w3-col s3"><img onclick="onClick(this)" src="assets/images/sketches/Monster_Conpcet.jpg" style="width:100%; height:100%;" alt="Monster Concept"></div>
-
-            <div class="w3-col s3"><img onclick="onClick(this)" src="assets/images/sketches/artTrade2.jpg" style="width:100%; height:100%;" alt="Art Trade"></div>
-
-            <div class="w3-col s3"><img onclick="onClick(this)" src="assets/images/sketches/Subdued.jpg" style="width:100%; height:100%;" alt="Subdued"></div>
-
-        </div>
-
-        <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+          <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
             <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
             <div class="w3-modal-content w3-animate-zoom">
             <img id="img01" style="width:100%">
         </div>
-        </div>
-        <script>
-            function onClick(element) {
+       
+       <script>
+         function onClick(element) {
               document.getElementById("img01").src = element.src;
               document.getElementById("modal01").style.display = "block";
             }
-            </script> 
-    </main>
+
+            function currentDiv(n) {
+        showDivs(slideIndex = n);
+        }
+            function showDivs(n){
+            var x = document.getElementsByClassName("myBar");
+            var dots = document.getElementsByClassName("demo");
+         if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+    }
+    x[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " w3-opacity-off";
+}
+            </script>
+        </main> 
        
     </body> 
-
     <div class="show-on-mobile">
-        <p style="padding: 23em"></p>
+        <p style="padding: 18em"></p>
     </div>
     <footer>
         <p>
         @2023 by Alana Gibbs.
         </p>
     </footer>
+   
 </html>
